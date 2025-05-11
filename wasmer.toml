@@ -1,0 +1,19 @@
+[package]
+name = "passwordtest"
+version = "0.1.0"
+description = "Password testing and storage application (educational use only)"
+
+[[module]]
+name = "password-manager"
+source = "main.py"          # Your main Python file
+interpreter = "python"      # Required for Python apps
+
+# Include your password storage file
+[[static]]
+source = "passlist.txt"      # Your password storage file
+destination = "/"            # Copies to root directory
+
+# Include any other necessary files
+[[static]]
+source = "requirements.txt"  # Python dependencies
+destination = "/"
